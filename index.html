@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploring Optimal Paths</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="/logos/left_logo.jpeg" alt="Logo 1">
+    </div>
+    <div class="college-names">
+      <h2>Sanjivani College of Engineering</h2>
+      <h3>Mechanical Engineering</h3>
+    </div>
+    <div class="logo">
+      <img src="/logos/right_logo.jpeg" alt="Logo 2">
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Exploring Optimal Paths: A Comparative Analysis of Optimization Techniques</h1>
+    
+    <div class="file-section">
+      <label for="fileInput">Select Data File:</label>
+      <input type="file" id="fileInput" accept=".xlsx, .xls" >
+      <span id="fileError" class="error"></span>
+    </div>
+
+    <div class="method-section">
+      <label for="methodSelect">Select Optimization Technique:</label>
+      <select id="methodSelect">
+        <option value="none">Select Technique</option>
+        <option value="WASPAS">WASPAS - Weighted Aggregated Sum Product Assessment</option>
+        <option value="GRA">GRA - Grey Relational Analysis</option>
+        <option value="MADM_TOPSIS">MADM & TOPSIS - Multi-Attribute Decision Making and Technique for Order Performance by Similarity to Ideal Solution</option>
+        <option value="WSM">WSM - Weighted Sum Method</option>
+        <option value="MOORA">MOORA - Multi-Objective Optimization Ratio Analysis</option>
+        <option value="ARAS">ARAS - Additive Ratio Assessment</option>
+        <option value="COPRAS">COPRAS - Complex Proportional Assessment</option>
+        <option value="MAUT">MAUT - Multi Attribute Utility Theory</option>
+        <option value="EDAS">EDAS - Evaluation Based on Distance from Average Solution</option>
+        <option value="CODAS">CODAS - Combinative Distance Based Assessment</option>
+      </select>
+      <span id="methodError" class="error"></span>
+    </div>
+    
+    <button id="calculateButton">Calculate</button>
+    
+    <div id="output">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Categories</th>
+            <th scope="col">Final Result</th>
+            <th scope="col">Rank</th>
+          </tr>
+        </thead>
+        <tbody id="outputBody">
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
